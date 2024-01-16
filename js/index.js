@@ -14,11 +14,33 @@
         document.querySelector('footer').innerHTML = data;
     })
     .catch
+        // carpeta entradas blog
+        // header
+        fetch('../componentes/header_blog.html')
+        .then(response => response.text())
+        .then ( data => {
+            document.querySelector('.header__blog--articulo').innerHTML = data;
+        })
+        .catch
+
+        // footer
+        fetch('../componentes/footer_blog.html')
+        .then(response => response.text())
+        .then( data => {
+            document.querySelector('.footer__blog--articulo').innerHTML = data;
+        })
+        .catch
 
 
-    // newsletter
+    // formulario de newsletter abreviada
+    fetch('componentes/abreviada_newsletter.html')
+    .then(response => response.text())
+    .then( data => {
+        document.querySelector('.section__newsletter--abreviada').innerHTML = data
+    })
+    .catch
 
-    // newsletter ilustraciones
+    // formulario de newsletter con ilustraciones
     fetch('componentes/ilustraciones_newsletter.html')
     .then(response => response.text())
     .then( data => {
@@ -26,11 +48,18 @@
     })
     .catch
 
-    // cards blog
+    // cookies
 
+    // formulario de contacto
+    fetch('componentes/formulario.html')
+    .then(response => response.text())
+    .then( data => {
+        document.querySelector('.formulario').innerHTML = data;
+    })
+    .catch
 
 // slider banner inicio
-    let imagenes = document.querySelector(".slider__img");
+    let imagenes = document.querySelectorAll(".slider__img");
     let contenedor = document.querySelector(".section__slider");
     let sliderActual = 0;
 
@@ -44,11 +73,11 @@
             let calculo = sliderActual * -100
             contenedor.style.transform = (`translateX(${calculo}vw)`)
         }
-    }, 500);
+    }, 7000);
 
 
 // slider block academia
-    let imagenes2 = document.querySelector(".block__item--img");
+    let imagenes2 = document.querySelectorAll(".block__item--img");
     let contededor2 = document.querySelector(".block__item--slider");
     let sliderActual2 = 0;
 
@@ -62,4 +91,16 @@
             let calculo = sliderActual2 * -100
             contededor2.style.transform = (`translateX(${calculo}vw)`)
         }
-    }, 600);
+    }, 1000);
+
+
+// slider opinion alumnos
+    /*
+    let opiniones = document.querySelector(".opinion__alumno")
+    let sliderOpiniones = [
+        
+    ]
+    */
+
+    
+

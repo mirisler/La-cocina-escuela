@@ -20,8 +20,9 @@
     --nav-font-size: 1em;
     --btn-font-size: 1em;
     --condiciones-font-size: 0.875em;
+    --pie-font-size: 0.875em;
 
-    --h1-line-height: 2.25em;
+    --h1-line-height: 1.5em;
     --h2-line-height: 1.4em;
     --h3-line-height: 1.5em;
     --h4-line-height: 1.125em;
@@ -97,6 +98,16 @@
 
 /* FINISHED */
 /* ESTILOS */
+
+h1::selection, h2::selection, h3::selection, h4::selection, p::selection, .blog__fecha::selection, b::selection, .condiciones::selection, label::selection {
+    color: var(--color-naranja-palido);
+    background: var(--color-naranja);
+}
+
+img::selection, input::selection, button::selection, ul::selection, li::selection, .btn::selection, a::selection, br::selection, iframe::selection  {
+    opacity: 0;
+}
+
 h1 {
     color: var(--color-naranja);
     font-family: var(--font-family);
@@ -144,7 +155,6 @@ p {
     font-weight: var(--font-weight-400);
     font-size: var(--fechas-font-size);
     margin-bottom: 1rem;
-
 }
 
 b {
@@ -158,6 +168,13 @@ a {
 .condiciones {
     font-family: var(--font-family);
     font-size: var(--condiciones-font-size);
+    font-weight: var(--font-weight-400);
+    color: var(--color-negro);
+}
+
+.pie {
+    font-family: var(--font-family);
+    font-size: var(--pie-font-size);
     font-weight: var(--font-weight-400);
     color: var(--color-negro);
 }
@@ -188,6 +205,48 @@ a {
 
 .btn:active {
     background-color: #F8AF4390;
+}
+
+.btn__blog {
+    width: 117px;
+    height: 34px;
+    padding: 0px 10px;
+    font-family: var(--font-family);
+    font-size: var(--btn-font-size);
+    font-weight: var(--font-weight-800);
+    background-color: var(--color-blanco);
+
+    color: var(--color-naranja);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn__blog:hover {
+    background-color: var(--color-naranja);
+    color: var(--color-blanco);
+    border: solid 2px var(--color-naranja);
+    border-radius: 9px;
+}
+
+.btn__blog:active {
+    background-color: #F8AF4390;
+}
+
+hr {
+    width: 100%;
+    margin: 0rem;
+    border: solid 2px var(--color-naranja);
+    border-radius: 2px;
+}
+
+.margin--bttm {
+    margin-bottom: 20px;
+}
+
+.text__align--center {
+    text-align: center;
 }
 
 /* TERMINAN ESTILOS */
@@ -263,15 +322,19 @@ a {
 /* TERMINA SLIDE */
 /* SECCIÓN ACADEMIA */
 
-.section__block {
+    /* clase reutilizada */
+    .section__block {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto;
+    }
+
+.inicio--academia{
     min-width: 921px;
     height: 449px;
     margin: 30px auto;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
 }
 
 .block__item--img {
@@ -298,7 +361,6 @@ a {
     display: flex;
     flex-flow: column nowrap;
     gap: 1rem;
-
 }
 
     /* slide academia */
@@ -330,23 +392,39 @@ a {
     margin: 0px 60px;
 }
 
+/* TERMINA SECCIÓN CURSOS */
 /* SECCIÓN BLOG */
 
-.section__cards--blog {
-    min-width: 1064px;
-    margin: 4rem auto;
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 3rem;
-}
 
-.cards__item {
-    width: 327px;
+
+.section__blog {
+    min-width: 40%;
+    max-width: 70%;
+    margin: 4rem auto;
 
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+}
+
+    /* clase reutilizada */
+    .section__cards {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 3rem 2rem;
+
+        flex-grow: 1;
+    }
+
+    /* clase reutilizada */
+    .block__card {
+        display: flex;
+        flex-direction: column;
+    }
+
+.cards__item {
+    width: 327px;
 }
 
 .cards__item--img {
@@ -355,6 +433,11 @@ a {
     margin-bottom: 1.4rem;
 }
 
+@media {
+
+}
+
+/* TERMINA SECCIÓN BLOG */
 /* SECCIÓN NEWSLETTER */
 
 .section__newsletter {
@@ -397,8 +480,12 @@ a {
     height: 42px;
 }
 
+.field:active {
+    border: solid 2px var(--color-naranja);
+}
+
 .form__newsletter {
-    width: 474px;
+    width: 400px;
 }
 
 .how__form {
@@ -415,6 +502,31 @@ a {
 }
 
 /* TERMINA SECCIÓN NEWSLETTER */
+/* SECCION NEWSLETTER ABREVIADA*/
+
+.section__newsletter--abreviada {
+    width: 69%;
+    margin: 4rem auto;
+}
+
+.newsletter__abreviada {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    margin: auto;
+}
+
+.newsletter__info {
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* TERMINA SECCION NEWSLETTER ABREVIADA */ 
 /* FOOTER */
 
 footer {
@@ -458,3 +570,256 @@ footer ul {
     display: flex;
     gap: 1rem;
 }
+
+/* TERMINA FOOTER */
+/* PAGINA ACADEMIA */
+
+/* (contenedor) section block línea 267 */
+    .section__aulacocina {
+        width: 648px;
+        margin-bottom: 2rem;
+    }
+
+/* (row) section__cards línea 347 */ 
+
+/* (columna) block__card línea 357 */
+    .block__aulacocina {
+        width: 385px;
+    }
+
+    .cards__aulacocina--img {
+        width: 337px;
+        margin-bottom: 20px;
+    }
+
+/* TERMINA PAGINA ACADEMIA */
+/* SLIDER OPINIONES ALUMNOS */
+
+    .section__opiniones {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .opiniones__slider {
+        width: 100%;
+        height: 254px;
+        background-color: var(--color-naranja);
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+    }
+
+    .opinion__alumno {
+        width: 398px;
+        height: 166px;
+        background-color: cyan;
+    }
+
+/* TERMINA SLIDER OPINIONES ALUMNOS */
+/* BANNER CURSOS */
+.section__banner--cursos {
+    width: 100%;
+    height: 463px;
+    background-image: url("../assets/img-editadas/fondo-banner.webp");
+    background-attachment: fixed;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    padding: 7rem;
+
+    margin-bottom: 2rem;
+}
+
+.banner__cursos--h3 {
+    width: 537px;
+    color: var(--color-blanco);
+}
+
+/* TERMINA BANNER CURSOS */
+/* COOKIES */
+
+.section__cookies {
+    width: 540px;
+    height: 280px;
+    background-color: var(--color-blanco);
+    border: solid 2px var(--color-naranja);
+    border-radius: 9px;
+    padding: 1rem 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.cookies__info {
+    width: 89%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    position: relative;
+}
+
+.cookies__btn {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-self: flex-end;
+
+}
+
+#pop__up--cookies {
+    display: none;
+}
+
+#pop__up--cookies:target {
+    display:flex;
+}
+
+
+/* TERMINA COOKIES */
+/* FORMULARIO */
+
+.section__formulario {
+    width: 60%;
+    height: fit-content;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.field__type--text {
+    width: 50%;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.field__item {
+    font-family: var(--font-family);
+    font-size: var(--paragraph-font-size);
+    font-weight: var(--font-weight-800);
+    color: var(--color-negro);
+    display: flex;
+    flex-direction: column;
+}
+
+.form__cond--btn {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    align-items: start;
+    align-self: flex-start;
+}
+
+/* TERMINA FORMULARIO */
+/* PÁGINA PREGUNTAS FRECUENTES */
+
+.section__preguntas {
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.preguntas--desplegables {
+    margin:10px 60px;
+    background-color: white;
+    padding: 40px 40px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.titulo__pregunta {
+    width: 100%;
+    padding: 15px;
+    min-height: 20px;
+    margin: 1rem 0px;
+    background-color: var(--color-naranja-palido);
+    border: solid 2px var(--color-naranja);
+    border-radius: 9px;
+
+    font-weight: var(--font-weight-400);
+}
+
+#pregunta1, #pregunta2,#pregunta3,#pregunta4,#pregunta5 {
+    display: none;
+}
+
+#pregunta1:target, #pregunta2:target, #pregunta3:target, #pregunta4:target, #pregunta5:target {
+    display: block;
+}
+
+/* TERMINA PÁGINA PREGUNTAS FRECUENTES */
+/* PÁGINA ARTÍCULOS BLOG */
+
+.section__blog--page {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3rem;
+}
+
+.articulo--blog {
+    margin-bottom: 50px;
+}
+
+
+/* TERMINA PÁGINA ARTÍCULOS BLOG */
+/* PÁGINA CONTACTO: MAPAS */
+
+.section__contacto--mapas {
+    min-width: 70%;
+    margin: auto;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    
+}
+
+.contacto__info {
+    margin: 3rem auto;
+    display: flex;
+    flex-flow: column;
+    align-self: flex-start;
+}
+
+.contacto__mapas {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-flow: row;
+    gap: 2rem;
+}
+
+
+/* TERMINA PÁGINA CONTACTO: MAPAS */
+
