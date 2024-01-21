@@ -581,6 +581,7 @@ hr {
 
 .newsletter__img--how {
     width: 444px;
+    z-index: 1;
 }
 
 .newsletter__info--how {
