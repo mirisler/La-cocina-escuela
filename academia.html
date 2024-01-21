@@ -9,55 +9,76 @@
 
     <title>Academia - La Cocina Escuela</title>
 </head>
-<body>
-    <header>
+<body> 
+    <main>
+        <header> <!-- fetch header -->
 
-    </header>
-    <img src="assets/img-webp/slider-inicio-banner.webp" alt="" class="slider__img">
-    <section class="section__block section__aulacocina">
-        <h1>Descubre nuestras aulas-cocina</h1>
-        <p class="text__align--center">En nuestras innovadoras aulas-cocina, transformamos la experiencia de aprender francés o inglés en una aventura culinaria única y emocionante ¡Acompáñanos y explora lo que nuestras aulas-cocina tienen para ofrecer!</p>
-        <div class="section__cards">
-            <div class="block__card block__aulacocina">
-                <img src="assets/img-webp/libreta.webp" alt="" class="cards__aulacocina--img">
-                <h3 class="margin--bttm">Lecciones</h3>
-                <p>Nuestras lecciones combinan ejercicios de comprensión y expresión escrita y oral con actividades prácticas en la cocina. Y además, todas las clases van acompañadas de apuntes que preparamos para cada una de las clases.</p>
+        </header> 
+        <section id="menu__hamburguesa"> <!-- menu vertical -->
+
+        </section>
+        <picture class="contenedor__banner--academia"> <!-- banner -->
+            <source srcset="assets/img-webp/slider-inicio-banner.webp" alt="aula de idiomas con encimera de cocina" loading="lazy" media="(min-width:780px)" class="slider__img">
+            <img src="assets/img-webp/banner_academia_responsive.webp" alt="ingredientes y plato de pollo al curry" loading="lazy" type="image/webp" class="slider__img">
+        </picture>
+        <section class="section__block section__aulacocina--width"> <!-- sección cards descripcion academia -->
+            <div class="container__intro">
+                <h1 class="text__align--center">Descubre nuestras aulas-cocina</h1>
+                <p class="text__align--center">En nuestras innovadoras aulas-cocina, transformamos la experiencia de aprender francés o inglés en una aventura culinaria única y emocionante ¡Acompáñanos y explora lo que nuestras aulas-cocina tienen para ofrecer!</p>
             </div>
-            <div class="block__card block__aulacocina">
-                <img src="assets/img-webp/chef.webp" alt="" class="cards__aulacocina--img">
-                <h3 class="margin--bttm">Chefs-Instructores</h3>
-                <p>Nuestros chefs-instructores son hablantes nativos de francés e inglés, apasionados de la enseñanza y gastronomía. Te guiarán a través de recetas deliciosas mientras te ayudan a perfeccionar tu pronunciación y fluidez.</p>
+            <div class="section__cards"> 
+                <div class="block__card block__aulacocina">
+                    <img src="assets/img-webp/libreta.webp" alt="ilustración de una libreta de anillas" loading="lazy" class="cards__aulacocina--img">
+                    <h3 class="margin--bttm">Lecciones</h3>
+                    <p>Nuestras lecciones combinan ejercicios de comprensión y expresión escrita y oral con actividades prácticas en la cocina. Y además, todas las clases van acompañadas de apuntes que preparamos para cada una de las clases.</p>
+                </div>
+                <div class="block__card block__aulacocina">
+                    <img src="assets/img-webp/chef.webp" alt="ilustración de un gorro de chef" loading="lazy" class="cards__aulacocina--img">
+                    <h3 class="margin--bttm">Chefs-Instructores</h3>
+                    <p>Nuestros chefs-instructores son hablantes nativos de francés e inglés, apasionados de la enseñanza y gastronomía. Te guiarán a través de recetas deliciosas mientras te ayudan a perfeccionar tu pronunciación y fluidez.</p>
+                </div>
+                <div class="block__card block__aulacocina">
+                    <img src="assets/img-webp/grupos.webp" alt="ilustración grupo de sillas alrededor de una mesa" loading="lazy" class="cards__aulacocina--img">
+                    <h3 class="margin--bttm">Grupos</h3>
+                    <p>Los grupos son de 6 alumnos en cada aula-cocina. Cada alumno dispone de un horno, una vitrocerámica, un fregadero y materiales de cocina como espátulas, ollas y bandejas.</p>
+                </div>
             </div>
-            <div class="block__card block__aulacocina">
-                <img src="assets/img-webp/grupos.webp" alt="" class="cards__aulacocina--img">
-                <h3 class="margin--bttm">Grupos</h3>
-                <p>Los grupos son de 6 alumnos en cada aula-cocina. Cada alumno dispone de un horno, una vitrocerámica, un fregadero y materiales de cocina como espátulas, ollas y bandejas.</p>
+        </section>
+        <section class="section__opiniones"> <!-- sección opiniones slider -->
+            <h2 class="text__align--center">Nuestros alumnos opinan</h2>
+            <div class="opiniones__slider">
+                <div class="opinion__alumno">
+                        <div class="alumno__identificador">
+                            <img src="assets/img-iconos/icon-trebol.svg" alt="ilustracion icono trebol" loading="lazy" class="alumno__icon--img">
+                            <p class="titulo__opiniones">Sonia</p>
+                        </div>
+                        <p class="texto__opiniones">Me ha encantado estudiar en La Cocina Escuela, no tenía soltura al hablar en francés y después de dos meses practicando y cocinando puedo hablar fluído. Merci beaucoup!</p>
+                    </div>
+                <div class="opinion__alumno">
+                    <div class="alumno__identificador">
+                        <img src="assets/img-iconos/icon-magdalena.svg" alt="ilustracion icono magdalena" loading="lazy" class="alumno__icon--img">
+                        <p class="titulo__opiniones">Jesús</p>
+                    </div>
+                    <p class="texto__opiniones">Mi experiencia en la academia ha sido genial. Me ha gustado mucho aprender de una vez por todas el inglés ¡¡¡y cocinando, vamos que el trabajo de clase me lo cenaba!!!</p>
+                </div>
+                <div class="opinion__alumno">
+                    <div class="alumno__identificador">
+                        <img src="assets/img-iconos/icon-estrella.svg" alt="ilustracion icono estrella" loading="lazy" class="alumno__icon--img">
+                        <p class="titulo__opiniones">Kevin</p>
+                    </div>
+                    <p class="texto__opiniones">Me ha ido muy bien aprendiendo aquí, los profesores y las clases han sido estupendas.</p>
+                </div>
             </div>
-        </div>
-    </section>
-    <section class="section__opiniones">
-        <h2>Nuestros alumnos opinan</h2>
-        <div class="opiniones__slider">
-            <div class="opinion__alumno">
-            </div>
-            <div class="opinion__alumno">
-            </div>
-            <div class="opinion__alumno">
-            </div>
-            <div class="opinion__alumno--buttons">
-                <button onclick="sliderPrev()" class="">←</button>
-                <button onclick="sliderNext()">→</button>
-            </div>
-        </div>
-    </section>
-    <section class="section__banner--cursos">
-        <h3 class="banner__cursos--h3"> En cada clase, no solo expandirás tu conocimiento del idioma, sino que también te llevarás a casa recetas y recuerdos que durarán toda la vida.</h3>
-        <a href="cursos.html" class="btn">Ver cursos</a>
-    </section>
-    <section class="section__newsletter">
+        </section>
+        <section class="section__banner--cursos"> <!-- banner con enlace a cursos -->
+            <h3 class="banner__cursos--h3"> En cada clase, no solo expandirás tu conocimiento del idioma, sino que también te llevarás a casa recetas y recuerdos que durarán toda la vida.</h3>
+            <a href="cursos.html" class="btn">Ver cursos</a>
+        </section>
+    </main>
+    <section class="section__newsletter"> <!-- fetch sección newsletter -->
 
     </section>
-    <footer>
+    <footer> <!-- fetch footer -->
 
     </footer>
 </body>
